@@ -52,9 +52,8 @@ caption_fontsize: "20pt"
 middle_fontfamily: "PT Sans"
 middle_textcol: "#ffffff"
 middle:textalpha: 150
-middle_fontsize: "180px"
-main_findings:
-  - "Young adults using mod (vs. pen-like) e-cigarette devices at baseline smoked **more than 6 times** as many cigarettes in the past 30 days at follow-up."
+middle_fontsize: "170px"
+main_findings: "Young adults using mod (vs. pen-like) e-cigarette devices at baseline smoked **more than 6 times** as many cigarettes in the past 30 days at follow-up."
 logoleft_name: "Figures/usc.jpg"
 logoright_name: "Figures/qr-code-black.png"
 #---POSTER BODY OPTIONS---#
@@ -99,13 +98,11 @@ Evidence that use of **e-cigarettes** with certain product characteristics may `
 - We evaluated the association of binary categories of three non-mutually exclusive characteristics of the e-cigarette used most frequently with number of cigarettes smoked in the past 30 days at 1-year follow-up.
 - Product characteristics included `device` (pen-like/mod [modifiable device]), use of `nicotine` in eliquid solutions (yes/no), and use for `dripping` (directly dripping eliquid onto the device for high levels of nicotine; yes/no).
 
+# Results
+
 ```{r, echo=FALSE, fig.cap="The distribution of past-30-day cigarette use at follow-up for the (L) overall sample, and (R) sample of past 30-day e-cigarette users, by demographics.", out.width = '100%', fig.align="left"}
 knitr::include_graphics("Figures/F1.png")
 ```
-
-
-<br />
-<br />
 
 
 
@@ -116,7 +113,7 @@ colnames(table1)[1] <- ""
 table1 %>% 
   kable(caption = 'Participant characteristics at baseline and association of each characteristic with number of cigarettes smoked in the past 30 days at follow-up; N = 1312.', align = 'c') %>%
   kable_styling(bootstrap_options = "striped", font_size = 30) %>%
-  row_spec(0, color = "black", background = "lightgrey") %>%
+  row_spec(0, color = "#a21933", background = "#ffc651") %>%
   column_spec(2, width = "15%") %>%
   column_spec(3, width = "30%") %>%
   pack_rows("Gender", 1, 2) %>%
@@ -125,9 +122,13 @@ table1 %>%
   pack_rows("E-cigarette use", 9, 11)
 ```
 
-# Results
 
-Usually you want to have a nice table displaying some important results that you have calculated. In `posterdown` this is as easy as using the `kable` table formatting you are probably use to as per typical R Markdown formatting.
+- The number of cigarettes smoked in the past 30 days at follow-up was higher for males (vs. females) and for those with parents who had some college or a college degree or `higher` (vs. a high school degree or less). 
+
+- **No differences** were observed by ethnicity. Similar patterns emerged in the sample restricted to past 30-day e-cigarette users.
+
+- Participants who reported prior or past 30-day e-cigarette use at baseline reported a higher average number of cigarettes smoked in the past 30 days at follow-up. 
+
 
 ```{r, echo=FALSE, fig.cap="", out.width = '100%', fig.align="left"}
 knitr::include_graphics("Figures/F2a.png")
@@ -136,6 +137,8 @@ knitr::include_graphics("Figures/F2a.png")
 ```{r, echo=FALSE, fig.cap="The distribution of past-30-day cigarette use at follow-up by four e-cigarette characteristics of current e-cigarette at baseline.", out.width = '100%', fig.align="left"}
 knitr::include_graphics("Figures/F2b.png")
 ```
+
+- Adolescents using a pen-like device (N=36; 26.5% of past 30-day e-cigarette users) **smoked on average very few cigarettes** in the past 30 days at follow-up (mean number of cigarettes smoked [SD] = 1.3 [3.89]), compared to those using a mod device (N=100; 73.5%; mean number of cigarettes smoked at follow-up [SD]=20.8 [59.8]). 
 
 ```{r, out.width='100%', fig.align='center'}
 table2 <- read_excel("table2.xlsx")
@@ -147,7 +150,7 @@ table2 %>%
   add_header_above(c(" " = 2, 
     "Association with Number of Cigarettes Smoked in Past 30 Days at Follow-up" = 3)) %>%
   kable_styling(bootstrap_options = "striped", font_size = 30, full_width = F) %>%
-  row_spec(0, color = "black", background = "lightgrey") %>%
+  row_spec(0, color = "#a21933", background = "#ffc651") %>%
   column_spec(2, width = "20%") %>%
   column_spec(1, width = "25%") %>%
   pack_rows("Device type", 2, 3， latex_gap_space = "1") %>%
@@ -155,6 +158,9 @@ table2 %>%
   pack_rows("Dripping", 6, 7)
 ```
 
+- Participants using a pen-like e-cigarette device smoked **`2.83`** times (95%CI: 1.26, 6.35) as many cigarettes in the past 30 days at follow-up as those who had never used e-cigarettes, and participants using a mod device smoked 8.38 times (95%CI: 4.87, 14.4) as many cigarettes in the past 30 days at follow-up. 
+
+- In analyses restricted to participants reporting past 30 day use of e-cigarettes, adolescents using mods smoked an average of **`5.11`** (95% CI: 1.74, 15.0) times as many cigarettes in the past 30 days at follow-up relative to adolescents using a pen-like e-cigarette device at baseline. 
 
 # Conclusion
 
