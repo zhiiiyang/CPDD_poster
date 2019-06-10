@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>E-cigarette product characteristics and frequency of smoking among young adults</title>
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 36in 48in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 36in;
+height: 48in;
+text-align: justify;
+font-size: 45px;
+line-height: 1.05;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: 24;
+color: #a21933;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+}
+.references {
+font-size: 23px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 36in;
+height: calc(48in *  (1 - 0.2 - 0.1 - 0.01) );
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+column-gap: 0;
+padding-left: 0cm;
+padding-right: 0cm;
+/* -webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%; */
+-webkit-column-rule-style: none;
+-moz-column-rule-style: none;
+column-rule-style: none;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+background-color: #ffffff;
+font-family: Rasa;
+margin-top: calc(48in *  0.2 );
+padding-top: 1em;
+padding-bottom: 1em;
+}
+span.citation {
+  color: ;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: ;
+}
+#title {
+font-size: 75pt;
+text-align: left;
+margin: 0;
+line-height: 98%;
+border-bottom: 0;
+font-weight: normal;
+}
+#author {
+color: #a21933;
+margin: 0;
+line-height: 85%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 0.1em;
+color: #00000080;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #777777;
+}
+.affiliation sup {
+font-size: 20px;
+}
+table {
+  padding-left: 5%;
+  padding-right:; 5%;
+}
+.author {
+text-align: left;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: ;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+text-align: left;
+}
+.outer h1, h2, h3, h4, h5, h6 {
+text-align: center;
+margin: 0;
+font-weight: bold;
+}
+.section h1 {
+  text-align:center;
+  padding-bottom:5px;
+  background:
+    linear-gradient(
+      to left,
+      #ffffff 1%,
+      #ffffff 20%,
+      #a2193375 33%,
+      #a21933 50%,
+      #a2193375 66%,
+      #ffffff 80%,
+      #ffffff 99%
+    )
+    left
+    bottom
+    #ffffff
+    no-repeat;
+  background-size:100% 5px ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p, .level2 {
+color: #000000;
+}
+.outer ol {
+padding-left: 8%;
+padding-right: 8%;
+text-align: left;
+}
+.middle {
+width: 36in;
+height: calc(48in *  0.2 );
+position: absolute;
+background-color: #a21933;
+color: #ffffff;
+font-family: Caveat;
+background-image: linear-gradient(#a21933 50%, );
+}
+.middle strong {
+color: #ffffff;
+}
+.middle strong > sup {
+color: #ffffff;
+}
+.middle sup {
+color: #ffffff;
+}
+#middle-img-left {
+width: 10%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+opacity: 0.5
+}
+#middle-img-center {
+width: 10%;
+left: calc(36in * 0.45);
+bottom: 0.5in;
+position: absolute;
+opacity: 0.5
+}
+#middle-img-right {
+width: 10%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+opacity: 0.6
+}
+.middle p {
+font-size: 200px;
+text-align: left;
+margin: 0;
+margin-left: 0.2em;
+margin-top: 0.75em;
+}
+.fab {
+color: #00000030;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000030;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000030;
+font-size: 35px;
+}
+.envelope {
+color: #00000030;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 36in;
+height: 48in;
+padding: 0cm;
+}
+.emphasis_bottom {
+width: 36in;
+height: calc(48in *  0.1 );
+margin-top: calc(48in *  (1 - 0.1) );
+position: absolute;
+background-color: #a21933;
+background-image: linear-gradient( 10%, #a21933);
+}
+
+.section, #author, #author_extra, #affiliation, #title {
+  padding-left: 7mm;
+  padding-right: 7mm;
+}
+
+span > #tab:mytable {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+
+<div class="column outer">
+<h1 id="title"><strong>E-cigarette product characteristics and frequency of smoking among young adults</strong></h1><br>
+<h3 id="author" class="author">
+
+Jessica L. Barrington-Trimis<sup> 1,*</sup><br>
+<a class="twitter" href="https://mobile.twitter.com/Doctor_BT"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@Doctor_BT</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:jtrimis@usc.edu" class="email">jtrimis@usc.edu</a> <br>
+ Zhi Yang<sup> 1</sup><br>
+<a class="twitter" href="https://mobile.twitter.com/zhiiiyang"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@zhiiiyang</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:zhiyang@usc.edu" class="email">zhiyang@usc.edu</a> <br>
+         </h3>
+
+<h5 id="author_extra", class="author_extra">
+  Sara Schiff<sup>1</sup>
+ Jennifer Unger<sup>1</sup>
+ Tess Boley Cruz<sup>1</sup>
+ Robert Urman<sup>1</sup>
+ Junhan Cho<sup>1</sup>
+ Jonathan Samet<sup>2</sup>
+ Adam M. Leventhal<sup>1</sup>
+ Kiros Berhane<sup>1</sup>
+ Rob McConnell<sup>1</sup>
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Department of Preventive Medicine, University of Southern California, Los Angeles, CA<br> <sup>2</sup> Colorado School of Public Health, Aurora, CO
+</p>
+
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Evidence that use of e-cigarettes with certain product characteristics may <code>increase</code> adolescent and young adult risk of unhealthy tobacco use patterns—such as frequency of combustible cigarette smoking—can inform regulation of e-cigarettes.</p>
+<hr />
+<div id="objectives" class="section level2">
+<h2><span class="header-section-number">1.1</span> Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Easy to use reproducible poster design.</li>
+<li>Integration with R Markdown.</li>
+<li>Easy transition from <code>posterdown</code> to <code>thesisdown</code> or <code>rticles</code> <span class="citation">(Allaire et al. 2018; Solomon 2019)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="methods" class="section level1">
+<h1><span class="header-section-number">2</span> Methods</h1>
+<p>Data were collected via online survey from participants in the Southern California Children’s Health Study in 2015-2016 (baseline) and 2016-2017 (follow-up) (N=1312). We evaluated the association of binary categories of three non-mutually exclusive characteristics of the e-cigarette used most frequently with number of cigarettes smoked in the past 30 days at 1-year follow-up. Product characteristics included device (pen-like/mod [modifiable device]), use of nicotine in eliquid solutions (yes/no), and use for dripping (directly dripping eliquid onto the device for high levels of nicotine; yes/no).</p>
+</div>
+<div id="results" class="section level1">
+<h1><span class="header-section-number">3</span> Results</h1>
+<p>Usually you want to have a nice table displaying some important results that you have calculated. In <code>posterdown</code> this is as easy as using the <code>kable</code> table formatting you are probably use to as per typical R Markdown formatting.</p>
+<p>I suggesting checking out the <code>kableExtra</code> package and its in depth documentation on customizing these tables found <a href="https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf">here</a> <span class="citation">(Zhu 2019)</span>. You can reference tables like so: Table <a href="#tab:mytable">3.1</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat augue at velit tincidunt semper. Donec elementum porta posuere. Nullam interdum, odio at tincidunt feugiat, turpis nisi blandit eros, eu posuere risus felis non quam. Nam eget lorem odio. Duis et aliquet orci. Phasellus nec viverra est.</p>
+<table>
+<caption><span id="tab:mytable">Table 3.1: </span>Table caption.</caption>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.1</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3.0</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="odd">
+<td align="center">4.7</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">4.6</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="odd">
+<td align="center">5.0</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">5.4</td>
+<td align="center">3.9</td>
+<td align="center">1.7</td>
+<td align="center">0.4</td>
+</tr>
+<tr class="odd">
+<td align="center">4.6</td>
+<td align="center">3.4</td>
+<td align="center">1.4</td>
+<td align="center">0.3</td>
+</tr>
+<tr class="even">
+<td align="center">5.0</td>
+<td align="center">3.4</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="odd">
+<td align="center">4.4</td>
+<td align="center">2.9</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="Figures/Picture1.png" /></p>
+</div>
+<div id="next-steps-more-random-text" class="section level1">
+<h1><span class="header-section-number">4</span> Next Steps: More random text</h1>
+<p>Aliquam sed faucibus risus, quis efficitur erat. Vestibulum semper mauris quis tempus eleifend. Aliquam sagittis dictum ipsum, quis viverra ligula eleifend ut. Curabitur sagittis vitae arcu eget faucibus. In non elementum felis. Duis et aliquam nunc. Nunc pulvinar sapien nunc, vel pretium nisi efficitur in. Fusce fringilla maximus leo et maximus. Fusce at ligula laoreet, iaculis mi at, auctor odio. Praesent sed elementum justo. Aenean consectetur risus rhoncus tincidunt efficitur. Praesent dictum mauris at diam maximus maximus <span class="citation">(Thorne 2019)</span>.</p>
+</div>
+<div id="conclusion" class="section level1">
+<h1><span class="header-section-number">5</span> Conclusion</h1>
+<p>Try <code>posterdown</code> out! Hopefully you like it!</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-rticles">
+<p>Allaire, JJ, Yihui Xie, R Foundation, Hadley Wickham, Journal of Statistical Software, Ramnath Vaidyanathan, Association for Computing Machinery, et al. 2018. <em>Rticles: Article Formats for R Markdown</em>. <a href="https://CRAN.R-project.org/package=rticles">https://CRAN.R-project.org/package=rticles</a>.</p>
+</div>
+<div id="ref-thesisdown">
+<p>Solomon, Nick. 2019. <em>Thesisdown: An Updated R Markdown Thesis Template Using the Bookdown Package</em>.</p>
+</div>
+<div id="ref-thorneposterdown2019">
+<p>Thorne, W. Brent. 2019. <em>Posterdown: An R Package Built to Generate Reproducible Conference Posters for the Academic and Professional World Were Powerpoint and Pages Just Wont Cut It</em>. Vol. 0.1.2. <a href="https://github.com/brentthorne/posterdown">https://github.com/brentthorne/posterdown</a>.</p>
+</div>
+<div id="ref-kableExtra2019">
+<p>Zhu, Hao. 2019. <em>KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax</em>. <a href="https://CRAN.R-project.org/package=kableExtra">https://CRAN.R-project.org/package=kableExtra</a>.</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="column middle">
+<p>Young adults using mod (vs. pen-like) e-cigarette devices at baseline smoked <strong>more than 6 times</strong> as many cigarettes in the past 30 days at follow-up.</p>
+</div>
+<div class="emphasis_bottom">
+<img id="middle-img-left" src=Figures/usc.jpg>
+<img id="middle-img-center" src=Figures/qr-code-black.png>
+<img id="middle-img-right" src=>
+</div>
+</div>
+
+
+
+</body>
+</html>
