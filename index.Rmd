@@ -52,12 +52,13 @@ affiliation_textcol: '#00000080'
 caption_fontsize: "30pt"
 #Middle of the poster
 middle_fontfamily: "PT Sans"
-middle_textcol: "#ffffff"
+middle_textcol: "#ffc651"
 middle:textalpha: 150
 middle_fontsize: "230px"
 main_findings: "Young adults using mod (vs. pen-like) e-cigarette devices at baseline smoked **more than 6 times** as many cigarettes in the past 30 days at follow-up."
 logoleft_name: "Figures/usc.jpg"
-logoright_name: "Figures/qr-code-black.png"
+logocenter_name: "Figures/trojan.png"
+logoright_name: "Figures/qr-code.png"
 #---POSTER BODY OPTIONS---#
 primary_colour: '#a21933'
 accent_colour: "#777777"
@@ -116,7 +117,7 @@ colnames(table1)[1] <- ""
 
 table1 %>% 
   kable(caption = 'Participant characteristics at baseline and association of each characteristic with number of cigarettes smoked in the past 30 days at follow-up; N = 1312.', align = 'c') %>%
-  row_spec(0, color = "#a21933", background = "#ffc651") %>%
+  row_spec(0, background = "#CCCCCC") %>%
   column_spec(2, width = "15%") %>%
   column_spec(3, width = "30%") %>%
   pack_rows("Gender", 1, 2) %>%
@@ -152,10 +153,10 @@ table2[6:7, 5] <- ""
 table2 %>% 
   kable(caption = 'Association between e-cigarette characteristics at baseline and number of cigarettes smoked in the past 30 days at follow-up; N=1312', align = 'c') %>%
   add_header_above(c(" " = 2, 
-    "Association with Number of Cigarettes Smoked in Past 30 Days at Follow-up" = 3), color = "#a21933", background = "#ffc651") %>%
-  row_spec(0, color = "#a21933", background = "#ffc651") %>%
+    "Association with Number of Cigarettes Smoked in Past 30 Days at Follow-up" = 3),  background = "#CCCCCC") %>%
+  row_spec(0, background = "#CCCCCC") %>%
   column_spec(2, width = "20%") %>%
-  column_spec(1, width = "25%") %>%
+  column_spec(1, width = "30%") %>%
   pack_rows("Device type", 2, 3, latex_gap_space = "1") %>%
   pack_rows("Nicotine", 4, 5) %>%
   pack_rows("Dripping", 6, 7)
