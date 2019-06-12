@@ -1,21 +1,22 @@
 ---
 # PLEASE SEE THE README for in depth description github.com/brentthorne/posterdown
-poster_height: "48in"
-poster_width: "36in"
-emph_size: 0.2 #percent coverage of the poster
-emphb_size: 0.1
+poster_height: "60in"
+poster_width: "40in"
+emph_size: 0.3 #percent coverage of the poster
+emphb_size: 0.09
 font_family: 'Rasa'
 #ESSENTIALS
 title: '**E-Cigarette Product Characteristics and Subsequent Frequency of Cigarette Smoking**'
 author:
-  - name: 'Jessica L. Barrington-Trimis'
-    affil: 1,*
-    main: true
-    twitter: Doctor_BT
   - name: Zhi Yang
     affil: 1
     main: true
     twitter: zhiiiyang
+    email: zhiyang@usc.edu
+  - name: 'Jessica L. Barrington-Trimis'
+    affil: 1,*
+    main: true
+    twitter: Doctor_BT
   - name: Sara Schiff
     affil: 1
   - name: Jennifer Unger
@@ -42,17 +43,17 @@ affiliation:
 #Column
 column_numbers: 3
 #STYLE & FORMATTING
-title_textsize: "45pt"
+title_textsize: "50pt"
 author_textsize: "1em"
 authorextra_textsize: "35px"
-affiliation_textsize: "25px"
+affiliation_textsize: "30px"
 affiliation_textcol: '#00000080'
 caption_fontsize: "20pt"
 #Middle of the poster
 middle_fontfamily: "PT Sans"
 middle_textcol: "#ffffff"
 middle:textalpha: 150
-middle_fontsize: "170px"
+middle_fontsize: "165px"
 main_findings: "Young adults using mod (vs. pen-like) e-cigarette devices at baseline smoked **more than 6 times** as many cigarettes in the past 30 days at follow-up."
 logoleft_name: "Figures/usc.jpg"
 logoright_name: "Figures/qr-code-black.png"
@@ -60,7 +61,7 @@ logoright_name: "Figures/qr-code-black.png"
 primary_colour: '#a21933'
 accent_colour: "#777777"
 body_bgcol: "#ffffff"
-body_textsize: "45px"
+body_textsize: "48px"
 body_textcol: "#000000"
 reference_textsize: "23px"
 #--Standard Options--#
@@ -89,11 +90,11 @@ library(formattable)
 
 # Introduction
 
-Evidence that use of **e-cigarettes** with certain product characteristics may `increase` adolescent and young adult risk of unhealthy tobacco use patterns—such as frequency of combustible cigarette smoking—can inform regulation of e-cigarettes. 
+Evidence that use of `e-cigarettes` with certain product characteristics may `increase` adolescent and young adult risk of unhealthy tobacco use patterns—such as frequency of combustible cigarette smoking—can inform regulation of e-cigarettes. 
 
 # Methods
 
-- Data were collected via online survey from participants in the Southern California Children’s Health Study in 2015-2016 (baseline) and 2016-2017 (follow-up) (**N=1312**). 
+- Data were collected via online survey from participants in the Southern California Children’s Health Study in 2015-2016 (baseline) and 2016-2017 (follow-up) (`N=1312`). 
 - We evaluated the association of binary categories of three non-mutually exclusive characteristics of the e-cigarette used most frequently with number of cigarettes smoked in the past 30 days at 1-year follow-up.
 - Product characteristics included `device` (pen-like/mod [modifiable device]), use of `nicotine` in eliquid solutions (yes/no), and use for `dripping` (directly dripping eliquid onto the device for high levels of nicotine; yes/no).
 
@@ -123,7 +124,7 @@ table1 %>%
 
 - The number of cigarettes smoked in the past 30 days at follow-up was higher for males (vs. females) and for those with parents who had some college or a college degree or `higher` (vs. a high school degree or less). 
 
-- **No differences** were observed by ethnicity. Similar patterns emerged in the sample restricted to past 30-day e-cigarette users.
+- `No differences` were observed by ethnicity. Similar patterns emerged in the sample restricted to past 30-day e-cigarette users.
 
 - Participants who reported prior or past 30-day e-cigarette use at baseline reported a higher average number of cigarettes smoked in the past 30 days at follow-up. 
 
@@ -137,7 +138,7 @@ knitr::include_graphics("Figures/F2b.png")
 ```
 
 
-- Adolescents using a pen-like device (N=36; 26.5% of past 30-day e-cigarette users) **smoked on average very few cigarettes** in the past 30 days at follow-up (mean number of cigarettes smoked [SD] = 1.3 [3.89]), compared to those using a mod device (N=100; 73.5%; mean number of cigarettes smoked at follow-up [SD]=20.8 [59.8]). 
+- Adolescents using a pen-like device (N=36; 26.5% of past 30-day e-cigarette users) `smoked on average very few cigarettes` in the past 30 days at follow-up (mean number of cigarettes smoked [SD] = 1.3 [3.89]), compared to those using a mod device (N=100; 73.5%; mean number of cigarettes smoked at follow-up [SD]=20.8 [59.8]). 
 
 <br>
 <br>
@@ -157,7 +158,7 @@ table2 %>%
   row_spec(0, color = "#a21933", background = "#ffc651") %>%
   column_spec(2, width = "20%") %>%
   column_spec(1, width = "25%") %>%
-  pack_rows("Device type", 2, 3， latex_gap_space = "1") %>%
+  pack_rows("Device type", 2, 3, latex_gap_space = "1") %>%
   pack_rows("Nicotine", 4, 5) %>%
   pack_rows("Dripping", 6, 7)
 ```
