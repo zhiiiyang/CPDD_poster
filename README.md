@@ -1,4 +1,5 @@
 # Association of e-cigarette characteristics and cigarettes in youth
+[![](https://img.shields.io/badge/doi-10.1542/peds.2019--1652-yellow.svg)](https://doi.org/10.1542/peds.2019-1652)
 
 <div align="center">
 
